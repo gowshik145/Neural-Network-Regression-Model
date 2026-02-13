@@ -1,4 +1,3 @@
-# Developing a Neural Network Regression Model
 ## AIM
 
 To develop a neural network regression model for the given dataset.
@@ -9,7 +8,8 @@ Explain the problem statement
 
 ## Neural Network Model
 
-Include the neural network model diagram.
+<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/a4e003c3-00a0-4168-bd4e-cfae7ae556bf" />
+
 
 ## DESIGN STEPS
 
@@ -82,18 +82,24 @@ def train_model(Gows_brain,x_train,y_train,criteria,optmizer,epochs=4000):
 train_model(Gows_brain,x_train_tensor,y_train_tensor,criteria,optimizer)
 ```
 ## Dataset Information
-
-Include screenshot of the dataset
+<img width="237" height="716" alt="image" src="https://github.com/user-attachments/assets/da2c9215-c6d8-4d33-9f30-f15f96fc59db" />
 
 ## OUTPUT
+<img width="622" height="515" alt="image" src="https://github.com/user-attachments/assets/a5279f9f-087e-4320-899f-2598c7e359f1" />
+
+<img width="677" height="130" alt="image" src="https://github.com/user-attachments/assets/69f53cbf-fc98-4c1f-80ca-88cf45693602" />
 
 ### Training Loss Vs Iteration Plot
+
+<img width="785" height="653" alt="image" src="https://github.com/user-attachments/assets/76869dbe-430c-493a-903f-659d96e457c2" />
 
 
 ### New Sample Data Prediction
 
-Include your sample input and output here
+<img width="521" height="103" alt="image" src="https://github.com/user-attachments/assets/2370e168-2f73-4f30-9899-e0ce9f12189a" />
 
 ## RESULT
 
-Include your result here
+Thus,the code was successfully executed to develop a neural network regression model...
+
+
