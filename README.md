@@ -1,5 +1,4 @@
 # Developing a Neural Network Regression Model
-
 ## AIM
 
 To develop a neural network regression model for the given dataset.
@@ -43,25 +42,44 @@ Plot the performance plot
 Evaluate the model with the testing data.
 
 ## PROGRAM
-### Name:
-### Register Number:
+
+### Name: Gowshik S
+### Register Number: 212223220026
 ```python
-class NeuralNet(nn.Module):
-    def __init__(self):
+
+import torch.nn as nn
+import torch.optim as optim
+class Neuralnet(nn.Module):
+   def __init__(self):
         super().__init__()
-        #Include your code here
+        self.n1=nn.Linear(1,10)
+        self.n2=nn.Linear(10,20)
+        self.n3=nn.Linear(20,1)
+        self.relu=nn.ReLU()
+        self.history={'loss': []}
+   def forward(self,x):
+        x=self.relu(self.n1(x))
+        x=self.relu(self.n2(x))
+        x=self.n3(x)
+        return x
+     
+Gows_brain=Neuralnet()
+criteria=nn.MSELoss()
+optimizer=optim.RMSprop(Gows_brain.parameters(),lr=0.001)
+     
+def train_model(Gows_brain,x_train,y_train,criteria,optmizer,epochs=4000):
+    for i in range(epochs):
+        optimizer.zero_grad()
+        loss=criteria(Gows_brain(x_train),y_train)
+        loss.backward()
+        optimizer.step()
 
+        Gows_brain.history['loss'].append(loss.item())
+        if i%200==0:
+            print(f"Epoch [{i}/epochs], loss: {loss.item():.6f}")
+     
 
-
-# Initialize the Model, Loss Function, and Optimizer
-
-
-
-def train_model(ai_brain, X_train, y_train, criterion, optimizer, epochs=2000):
-    #Include your code here
-
-
-
+train_model(Gows_brain,x_train_tensor,y_train_tensor,criteria,optimizer)
 ```
 ## Dataset Information
 
@@ -71,7 +89,6 @@ Include screenshot of the dataset
 
 ### Training Loss Vs Iteration Plot
 
-Include your plot here
 
 ### New Sample Data Prediction
 
